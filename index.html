@@ -170,6 +170,7 @@
             // Form States
             const [formData, setFormData] = useState({ username: '', password: '', name: '', age: '', gender: 'other' });
             const [loginData, setLoginData] = useState({ username: '', password: '' });
+            const [loginError, setLoginError] = useState(false);
 
             // Persist Users
             useEffect(() => {
@@ -244,10 +245,12 @@
                 e.preventDefault();
                 const found = users.find(u => u.username === loginData.username && u.password === loginData.password);
                 if (found) {
+                    setLoginError(false);
                     setCurrentUser(found);
                     localStorage.setItem('next_edu_active_user', found.username);
                     setView('welcome');
                 } else {
+                    setLoginError(true);
                     triggerPopup("Invalid credentials.");
                 }
             };
@@ -256,7 +259,14 @@
                 localStorage.removeItem('next_edu_active_user');
                 setCurrentUser(null);
                 setView('auth');
+                setLoginData({ username: '', password: '' });
+                setLoginError(false);
             };
+
+            // Reset error when switching tabs
+            useEffect(() => {
+                setLoginError(false);
+            }, [authTab]);
 
             // Platform Handlers
             const handleNext = () => {
@@ -345,14 +355,40 @@
                                 {authTab === 'login' ? (
                                     <form onSubmit={handleLogin} className="space-y-4">
                                         <div className="relative">
-                                            <Icon name="User" className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                                            <input type="text" placeholder="Username" required className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:border-indigo-500 outline-none transition-all" value={loginData.username} onChange={(e) => setLoginData({...loginData, username: e.target.value})} />
+                                            <Icon name="User" className={`absolute left-4 top-1/2 -translate-y-1/2 transition-colors ${loginError ? 'text-rose-400' : 'text-slate-400'}`} />
+                                            <input 
+                                                type="text" 
+                                                placeholder="Username" 
+                                                required 
+                                                className={`w-full pl-12 pr-4 py-4 border rounded-2xl outline-none transition-all ${loginError ? 'bg-rose-50 border-rose-500 text-rose-900 placeholder-rose-300' : 'bg-slate-50 border-slate-100 text-slate-900 focus:border-indigo-500'}`} 
+                                                value={loginData.username} 
+                                                onChange={(e) => {
+                                                    setLoginData({...loginData, username: e.target.value});
+                                                    setLoginError(false);
+                                                }} 
+                                            />
                                         </div>
                                         <div className="relative">
-                                            <Icon name="Lock" className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                                            <input type="password" placeholder="Password" required className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:border-indigo-500 outline-none transition-all" value={loginData.password} onChange={(e) => setLoginData({...loginData, password: e.target.value})} />
+                                            <Icon name="Lock" className={`absolute left-4 top-1/2 -translate-y-1/2 transition-colors ${loginError ? 'text-rose-400' : 'text-slate-400'}`} />
+                                            <input 
+                                                type="password" 
+                                                placeholder="Password" 
+                                                required 
+                                                className={`w-full pl-12 pr-4 py-4 border rounded-2xl outline-none transition-all ${loginError ? 'bg-rose-50 border-rose-500 text-rose-900 placeholder-rose-300' : 'bg-slate-50 border-slate-100 text-slate-900 focus:border-indigo-500'}`} 
+                                                value={loginData.password} 
+                                                onChange={(e) => {
+                                                    setLoginData({...loginData, password: e.target.value});
+                                                    setLoginError(false);
+                                                }} 
+                                            />
                                         </div>
                                         <button className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-bold shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all mt-4">Sign In</button>
+                                        
+                                        {loginError && (
+                                            <div className="mt-4 text-rose-500 text-xs font-bold text-center animate-in fade-in slide-in-from-top-1 duration-200">
+                                                Incorrect username or password. Please try again.
+                                            </div>
+                                        )}
                                     </form>
                                 ) : (
                                     <form onSubmit={handleRegister} className="space-y-4">
