@@ -47,6 +47,14 @@
             );
             animation: shimmer 3s infinite;
         }
+
+        /* Background Pattern for Dark Screens */
+        .auth-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+        }
     </style>
 </head>
 <body class="bg-slate-50 overflow-hidden">
@@ -74,14 +82,14 @@
                 LogOut: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" /></svg>,
                 User: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>,
                 Lock: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>,
-                Identification: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" /></svg>,
-                Calendar: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>,
-                UserGroup: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.941 3.199a9.094 9.094 0 0 0-3.741-.479 3 3 0 0 0-4.682 2.72m.941 3.199a9.094 9.094 0 0 0-3.741-.479 3.001 3.001 0 0 0-4.682 2.72m.941 3.199ZM12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-7-4a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm14 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm14 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>,
                 Globe: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 18c-5.965 0-10.8-4.03-10.8-9s4.835-9 10.8-9m0 18c5.965 0 10.8-4.03 10.8-9s-4.835-9-10.8-9" /></svg>,
                 Fingerprint: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.263M14.89 4.043A7.501 7.501 0 0 0 4.5 10.5c0 1.97.541 3.815 1.48 5.394M9 21h6M12 15c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2Z" /></svg>,
                 Leaf: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 18c-5.965 0-10.8-4.03-10.8-9s4.835-9 10.8-9m0 18c5.965 0 10.8-4.03 10.8-9s-4.835-9-10.8-9" /></svg>,
                 Cpu: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5m-15 7.5H3m18 0h-1.5m-15 3.75V21m11.25-18v1.5m0 15V21M4.75 4.75l1.06 1.06m12.38 12.38l1.06 1.06m0-13.44l-1.06 1.06m-12.38 12.38l-1.06 1.06M8.25 7.5V16.5M16.5 8.25H7.5" /></svg>,
                 MenuAlt2: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" /></svg>,
+                Identification: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" /></svg>,
+                Calendar: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>,
+                UserGroup: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={baseClass}><path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.941 3.199a9.094 9.094 0 0 0-3.741-.479 3 3 0 0 0-4.682 2.72m.941 3.199a9.094 9.094 0 0 0-3.741-.479 3.001 3.001 0 0 0-4.682 2.72m.941 3.199ZM12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-7-4a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm14 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm14 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>,
             };
             return icons[name] || null;
         };
@@ -300,51 +308,38 @@
 
         const CLEVER_PHRASES = ["Try again!", "Not quite.", "Check your logic!", "Incorrect!", "One more go?"];
 
-        // --- Helper: Get Progress Text ---
         const getProgressText = (user, courseId) => {
             const course = COURSES.find(c => c.id === courseId);
             if (!course) return "Not started";
             const cleared = user.progress?.[courseId] || [];
             if (cleared.length === 0) return "Not started";
-            
-            let furthestChap = 0;
-            let furthestConcept = 0;
-            
+            let fC = 0, fV = 0;
             course.chapters.forEach((ch, cIdx) => {
-                let conceptsInChap = 0;
+                let concInCh = 0;
                 ch.slides.forEach((s) => {
                     if (s.type !== 'explanation') {
-                        conceptsInChap++;
-                        if (cleared.includes(s.id)) {
-                            furthestChap = cIdx + 1;
-                            furthestConcept = conceptsInChap;
-                        }
+                        concInCh++;
+                        if (cleared.includes(s.id)) { fC = cIdx + 1; fV = concInCh; }
                     }
                 });
             });
-            
-            if (furthestChap === 0) return "Reading concepts...";
-            return `Ch ${furthestChap}, Concept ${furthestConcept} cleared`;
+            return fC === 0 ? "Reading concepts..." : `Ch ${fC}, Concept ${fV} cleared`;
         };
 
         // --- Main App Component ---
         function App() {
-            // Core Auth/User States
             const [currentUser, setCurrentUser] = useState(null);
             const [users, setUsers] = useState(() => JSON.parse(localStorage.getItem('next_edu_users') || '[]'));
             const [authTab, setAuthTab] = useState('login');
             const [view, setView] = useState('auth'); 
             const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
             const [isMobilePortrait, setIsMobilePortrait] = useState(false);
-
-            // Form/Platform UI States
             const [formData, setFormData] = useState({ username: '', password: '', name: '', age: '', gender: 'other' });
             const [loginData, setLoginData] = useState({ username: '', password: '' });
             const [loginError, setLoginError] = useState(false);
             const [registerError, setRegisterError] = useState("");
             const [popup, setPopup] = useState({ show: false, message: '' });
 
-            // Course Navigation States
             const [currentCourseId, setCurrentCourseId] = useState(COURSES[0].id);
             const [currentChapterIdx, setCurrentChapterIdx] = useState(0);
             const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
@@ -352,105 +347,50 @@
             const [courseCompleted, setCourseCompleted] = useState(false);
             const [showCertificate, setShowCertificate] = useState(false);
 
-            // --- Effects & Persistance ---
             useEffect(() => { localStorage.setItem('next_edu_users', JSON.stringify(users)); }, [users]);
-
             useEffect(() => {
                 const active = localStorage.getItem('next_edu_active_user');
                 if (active) {
                     const found = users.find(u => u.username === active);
                     if (found) { setCurrentUser(found); setView('welcome'); }
                 }
-                
-                const checkOrientation = () => {
-                    setIsMobilePortrait(window.innerWidth < 768 && window.innerHeight > window.innerWidth);
-                };
-                checkOrientation();
-                window.addEventListener('resize', checkOrientation);
-                return () => window.removeEventListener('resize', checkOrientation);
+                const ck = () => setIsMobilePortrait(window.innerWidth < 768 && window.innerHeight > window.innerWidth);
+                ck(); window.addEventListener('resize', ck); return () => window.removeEventListener('resize', ck);
             }, []);
 
-            // Helper for persistent updates
             const updateUsersList = (updatedUser) => {
                 const newList = users.map(u => u.username === updatedUser.username ? updatedUser : u);
-                setUsers(newList);
-                setCurrentUser(updatedUser);
+                setUsers(newList); setCurrentUser(updatedUser);
             };
 
-            const triggerPopup = (msg) => {
-                setPopup({ show: true, message: msg });
-                setTimeout(() => setPopup({ show: false, message: '' }), 3000);
-            };
+            const triggerPopup = (msg) => { setPopup({ show: true, message: msg }); setTimeout(() => setPopup({ show: false, message: '' }), 3000); };
 
-            // --- Handlers ---
             const handleRegister = (e) => {
-                e.preventDefault();
-                setRegisterError("");
-
-                if (users.some(u => u.username.toLowerCase() === formData.username.toLowerCase())) {
-                    setRegisterError("This username is already taken. Try another.");
-                    return;
-                }
-
-                const usernameRegex = /^[a-zA-Z0-9_]+$/;
-                if (!usernameRegex.test(formData.username)) {
-                    setRegisterError("Username can only contain letters, numbers, and underscores.");
-                    return;
-                }
-
-                if (formData.username.length < 3) {
-                    setRegisterError("Username must be at least 3 characters long.");
-                    return;
-                }
-
-                const nameRegex = /^[a-zA-Z\s]+$/;
-                if (!nameRegex.test(formData.name)) {
-                    setRegisterError("Full Name can only contain letters and spaces.");
-                    return;
-                }
-
+                e.preventDefault(); setRegisterError("");
+                if (users.some(u => u.username.toLowerCase() === formData.username.toLowerCase())) { setRegisterError("Username taken."); return; }
                 const newUser = { ...formData, progress: {}, lastPosition: {} };
-                setUsers([...users, newUser]);
-                setCurrentUser(newUser);
-                localStorage.setItem('next_edu_active_user', formData.username);
-                setView('welcome');
+                setUsers([...users, newUser]); setCurrentUser(newUser);
+                localStorage.setItem('next_edu_active_user', formData.username); setView('welcome');
             };
 
             const handleLogin = (e) => {
                 e.preventDefault();
                 const found = users.find(u => u.username === loginData.username && u.password === loginData.password);
-                if (found) {
-                    setLoginError(false);
-                    setCurrentUser(found);
-                    localStorage.setItem('next_edu_active_user', found.username);
-                    setView('welcome');
-                } else {
-                    setLoginError(true);
-                }
+                if (found) { setLoginError(false); setCurrentUser(found); localStorage.setItem('next_edu_active_user', found.username); setView('welcome'); }
+                else { setLoginError(true); }
             };
 
-            const handleLogout = () => {
-                localStorage.removeItem('next_edu_active_user');
-                setCurrentUser(null);
-                setView('auth');
-                setLoginData({ username: '', password: '' });
-                setLoginError(false);
-                setRegisterError("");
-            };
+            const handleLogout = () => { localStorage.removeItem('next_edu_active_user'); setCurrentUser(null); setView('auth'); setLoginData({ username: '', password: '' }); setLoginError(false); setRegisterError(""); };
 
             const savePosition = (uObj, cId, cIdx, sIdx) => {
                 const lp = uObj.lastPosition || {};
-                const updated = { ...uObj, lastPosition: { ...lp, [cId]: { cIdx, sIdx } } };
-                updateUsersList(updated);
+                updateUsersList({ ...uObj, lastPosition: { ...lp, [cId]: { cIdx, sIdx } } });
             };
 
             const handleLaunchCourse = (cId) => {
                 const saved = currentUser.lastPosition?.[cId] || { cIdx: 0, sIdx: 0 };
-                setCurrentCourseId(cId);
-                setCurrentChapterIdx(saved.cIdx);
-                setCurrentSlideIdx(saved.sIdx);
-                setCourseCompleted(false);
-                setView('platform');
+                setCurrentCourseId(cId); setCurrentChapterIdx(saved.cIdx); setCurrentSlideIdx(saved.sIdx);
+                setCourseCompleted(false); setView('platform');
             };
 
             const currentCourse = COURSES.find(c => c.id === currentCourseId);
@@ -458,54 +398,40 @@
             const currentSlide = currentChapter?.slides[currentSlideIdx];
             const userProgress = currentUser?.progress?.[currentCourseId] || [];
             
-            const isSlideCleared = (slideId) => userProgress.includes(slideId);
-            const isCurrentSlideCleared = useMemo(() => {
+            const isSlideCleared = (id) => userProgress.includes(id);
+            const isCurrentCleared = useMemo(() => {
                 if (!currentSlide) return true;
-                if (currentSlide.type === 'explanation') return true;
-                return isSlideCleared(currentSlide.id);
+                return currentSlide.type === 'explanation' || isSlideCleared(currentSlide.id);
             }, [currentSlide, userProgress]);
 
-            const isSlideUnlocked = (chapIdx, slideIdx) => {
-                if (chapIdx === 0 && slideIdx === 0) return true;
-                let prevC = chapIdx, prevS = slideIdx - 1;
-                if (prevS < 0) {
-                    prevC = chapIdx - 1;
-                    if (prevC < 0) return true;
-                    prevS = currentCourse.chapters[prevC].slides.length - 1;
-                }
-                const pSlide = currentCourse.chapters[prevC].slides[prevS];
-                return pSlide.type === 'explanation' || isSlideCleared(pSlide.id);
+            const isSlideUnlocked = (cI, sI) => {
+                if (cI === 0 && sI === 0) return true;
+                let pC = cI, pS = sI - 1;
+                if (pS < 0) { pC = cI - 1; if (pC < 0) return true; pS = currentCourse.chapters[pC].slides.length - 1; }
+                const pSl = currentCourse.chapters[pC].slides[pS];
+                return pSl.type === 'explanation' || isSlideCleared(pSl.id);
             };
 
             const handleNext = () => {
-                if (!isCurrentSlideCleared) { triggerPopup("Answer correctly to proceed!"); return; }
+                if (!isCurrentCleared) { triggerPopup("Answer correctly to proceed!"); return; }
                 const isLastS = currentSlideIdx === currentChapter.slides.length - 1;
                 const isLastC = currentChapterIdx === currentCourse.chapters.length - 1;
                 if (isLastS && isLastC) { setCourseCompleted(true); return; }
-                
-                let nextC = currentChapterIdx, nextS = currentSlideIdx;
-                if (isLastS) { nextC++; nextS = 0; }
-                else { nextS++; }
-                
-                setCurrentChapterIdx(nextC); setCurrentSlideIdx(nextS);
-                savePosition(currentUser, currentCourseId, nextC, nextS);
+                let nC = currentChapterIdx, nS = currentSlideIdx;
+                if (isLastS) { nC++; nS = 0; } else { nS++; }
+                setCurrentChapterIdx(nC); setCurrentSlideIdx(nS); savePosition(currentUser, currentCourseId, nC, nS);
             };
 
             const handlePrev = () => {
                 if (courseCompleted) { setCourseCompleted(false); setShowCertificate(false); return; }
-                let nextC = currentChapterIdx, nextS = currentSlideIdx;
-                if (currentSlideIdx > 0) { nextS--; }
-                else if (currentChapterIdx > 0) {
-                    nextC--; nextS = currentCourse.chapters[nextC].slides.length - 1;
-                }
-                setCurrentChapterIdx(nextC); setCurrentSlideIdx(nextS);
-                savePosition(currentUser, currentCourseId, nextC, nextS);
+                let nC = currentChapterIdx, nS = currentSlideIdx;
+                if (currentSlideIdx > 0) { nS--; } else if (currentChapterIdx > 0) { nC--; nS = currentCourse.chapters[nC].slides.length - 1; }
+                setCurrentChapterIdx(nC); setCurrentSlideIdx(nS); savePosition(currentUser, currentCourseId, nC, nS);
             };
 
-            const selectTopic = (cIdx, sIdx) => {
-                if (!isSlideUnlocked(cIdx, sIdx)) { triggerPopup("Complete previous topics first!"); return; }
-                setCurrentChapterIdx(cIdx); setCurrentSlideIdx(sIdx);
-                savePosition(currentUser, currentCourseId, cIdx, sIdx);
+            const selectTopic = (cI, sI) => {
+                if (!isSlideUnlocked(cI, sI)) { triggerPopup("Complete previous topics first!"); return; }
+                setCurrentChapterIdx(cI); setCurrentSlideIdx(sI); savePosition(currentUser, currentCourseId, cI, sI);
                 setCourseCompleted(false); setShowCertificate(false);
             };
 
@@ -514,29 +440,43 @@
                 if (isC) {
                     const prog = currentUser.progress[currentCourseId] || [];
                     if (!prog.includes(currentSlide.id)) {
-                        const updated = { ...currentUser, progress: { ...currentUser.progress, [currentCourseId]: [...prog, currentSlide.id] } };
-                        updateUsersList(updated);
+                        updateUsersList({ ...currentUser, progress: { ...currentUser.progress, [currentCourseId]: [...prog, currentSlide.id] } });
                     }
-                } else {
-                    triggerPopup(CLEVER_PHRASES[phraseIdx]); setPhraseIdx(p => (p + 1) % CLEVER_PHRASES.length);
-                }
+                } else { triggerPopup(CLEVER_PHRASES[phraseIdx]); setPhraseIdx(p => (p + 1) % CLEVER_PHRASES.length); }
             };
 
-            // --- Authentication Views ---
+            const Certificate = ({ user, courseTitle }) => (
+                <div id="certificate-print-area" className="w-full max-w-4xl bg-white p-12 border-[16px] border-double border-slate-200 shadow-2xl text-center relative mx-auto my-8">
+                    <div className="absolute inset-4 border border-slate-100 pointer-events-none"></div>
+                    <div className="relative z-10 text-slate-900">
+                        <p className="text-indigo-600 font-bold tracking-widest uppercase mb-4">Certificate of Completion</p>
+                        <h2 className="serif text-5xl text-slate-800 mb-8">Next Education</h2>
+                        <div className="w-24 h-1 bg-indigo-600 mx-auto mb-8"></div>
+                        <p className="text-xl text-slate-500 mb-2 italic">This is to certify that</p>
+                        <h3 className="serif text-4xl text-slate-900 mb-8 border-b-2 border-slate-100 inline-block px-8 py-2">{user.name}</h3>
+                        <p className="text-xl text-slate-500 mb-2 italic">has successfully completed the course</p>
+                        <h4 className="text-3xl font-bold text-indigo-700 mb-12">{courseTitle}</h4>
+                        <div className="flex justify-between items-end mt-16 px-12">
+                            <div className="text-center"><div className="serif text-xl border-b border-slate-300 px-4 mb-1">Mrs. Huma Sarfraz</div><div className="text-xs text-slate-400 tracking-widest uppercase">Academic Director</div></div>
+                            <div className="text-center"><div className="serif text-xl border-b border-slate-300 px-4 mb-1">{new Date().toLocaleDateString()}</div><div className="text-xs text-slate-400 tracking-widest uppercase">Issue Date</div></div>
+                        </div>
+                    </div>
+                </div>
+            );
+
             if (view === 'auth') return (
-                <div className="h-screen w-full flex items-center justify-center bg-slate-900 p-6 overflow-y-auto text-slate-900">
+                <div className="h-screen w-full flex flex-col items-center justify-center auth-bg p-6 overflow-y-auto text-slate-900">
+                    <div className="mb-8 flex flex-col items-center gap-2 animate-in slide-in-from-top-4 duration-700">
+                        <div className="bg-white p-3 rounded-3xl shadow-2xl"><SiteLogo className="w-16 h-16" /></div>
+                        <h1 className="text-white font-black text-3xl tracking-tight">Next Education</h1>
+                    </div>
                     <div className="max-w-md w-full bg-white rounded-[32px] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-500">
                         <div className="flex bg-slate-100 p-2">
                             <button onClick={() => setAuthTab('login')} className={`flex-1 py-3 rounded-2xl font-bold transition-all ${authTab === 'login' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-400'}`}>Login</button>
                             <button onClick={() => setAuthTab('register')} className={`flex-1 py-3 rounded-2xl font-bold transition-all ${authTab === 'register' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-400'}`}>Register</button>
                         </div>
-                        <div className="p-8">
-                            <div className="flex justify-center mb-6">
-                                <div className="relative p-4 rounded-2xl text-white shadow-2xl shimmer-effect flex items-center justify-center bg-white border border-slate-100">
-                                    <SiteLogo className="w-12 h-12" />
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-extrabold text-slate-900 text-center mb-2">{authTab === 'login' ? 'Welcome Back' : 'Join Next Education'}</h1>
+                        <div className="p-8 pt-6">
+                            <h2 className="text-xl font-bold text-slate-800 text-center mb-6">{authTab === 'login' ? 'Welcome Back' : 'Create Your Account'}</h2>
                             {authTab === 'login' ? (
                                 <form onSubmit={handleLogin} className="space-y-4">
                                     <div className="relative"><Icon name="User" className={`absolute left-4 top-1/2 -translate-y-1/2 ${loginError ? 'text-rose-400' : 'text-slate-400'}`} /><input type="text" placeholder="Username" required className={`w-full pl-12 pr-4 py-4 border rounded-2xl outline-none transition-all ${loginError ? 'bg-rose-50 border-rose-500' : 'bg-slate-50 border-slate-100 focus:border-indigo-500'}`} value={loginData.username} onChange={e => {setLoginData({...loginData, username: e.target.value}); setLoginError(false);}} /></div>
@@ -562,35 +502,26 @@
                 </div>
             );
 
-            // --- Dashboard View ---
             if (view === 'welcome') return (
-                <div className="h-screen w-full flex items-center justify-center bg-slate-50 p-6 overflow-hidden text-slate-900">
+                <div className="h-screen w-full flex flex-col items-center justify-center auth-bg p-6 overflow-hidden text-slate-900">
+                    <div className="mb-8 flex items-center gap-3 animate-in fade-in duration-1000">
+                        <div className="bg-white p-2 rounded-2xl shadow-xl"><SiteLogo className="w-10 h-10" /></div>
+                        <h1 className="text-white font-black text-2xl tracking-tight">Next Education</h1>
+                    </div>
                     <div className="max-w-2xl w-full bg-white rounded-[40px] p-10 shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-8 animate-in zoom-in-95 duration-500 max-h-full">
                         <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start shrink-0">
-                            <div className="relative mb-4">
-                                <img src={`https://ui-avatars.com/api/?name=${currentUser.name}&background=4F46E5&color=fff&size=128`} className="w-24 h-24 rounded-full border-4 border-white shadow-xl" />
-                                <div className="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
-                            </div>
+                            <div className="relative mb-4"><img src={`https://ui-avatars.com/api/?name=${currentUser.name}&background=4F46E5&color=fff&size=128`} className="w-24 h-24 rounded-full border-4 border-white shadow-xl" /><div className="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div></div>
                             <h2 className="text-3xl font-extrabold text-slate-900 mb-1">Hi, {currentUser.name}!</h2>
                             <p className="text-indigo-600 font-medium mb-10 text-sm">@{currentUser.username}</p>
-                            <div className="mt-auto w-full">
-                                <button onClick={handleLogout} className="w-full md:w-auto bg-slate-100 text-slate-600 px-6 py-4 rounded-2xl font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2">
-                                    <Icon name="LogOut" className="w-4 h-4" /> Change User
-                                </button>
-                            </div>
+                            <div className="mt-auto w-full"><button onClick={handleLogout} className="w-full md:w-auto bg-slate-100 text-slate-600 px-6 py-4 rounded-2xl font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2"><Icon name="LogOut" className="w-4 h-4" /> Change User</button></div>
                         </div>
                         <div className="flex-[1.5] flex flex-col min-h-0">
-                            <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                <Icon name="BookOpen" className="text-indigo-600" /> Available Courses
-                            </h3>
+                            <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2"><Icon name="BookOpen" className="text-indigo-600" /> Available Courses</h3>
                             <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-3">
                                 {COURSES.map(c => (
                                     <button key={c.id} onClick={() => handleLaunchCourse(c.id)} className="w-full flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl hover:border-indigo-600 hover:bg-indigo-50 transition-all group text-left">
                                         <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-3 mb-1">
-                                                <div className="bg-white p-1.5 rounded-lg shadow-sm text-indigo-600"><Icon name={c.icon} className="!w-4 !h-4" /></div>
-                                                <span className="font-bold text-slate-700 text-sm truncate group-hover:text-indigo-700">{c.title}</span>
-                                            </div>
+                                            <div className="flex items-center gap-3 mb-1"><div className="bg-white p-1.5 rounded-lg shadow-sm text-indigo-600"><Icon name={c.icon} className="!w-4 !h-4" /></div><span className="font-bold text-slate-700 text-sm truncate group-hover:text-indigo-700">{c.title}</span></div>
                                             <p className="text-[10px] font-bold text-emerald-600 ml-9 uppercase tracking-wider">{getProgressText(currentUser, c.id)}</p>
                                         </div>
                                         <Icon name="ChevronRight" className="text-slate-300 group-hover:text-indigo-600 transition-colors" />
@@ -602,7 +533,6 @@
                 </div>
             );
 
-            // --- Platform View ---
             return (
                 <div className="flex h-screen bg-slate-50 text-slate-900 overflow-hidden">
                     {popup.show && (
@@ -613,137 +543,68 @@
                             </div>
                         </div>
                     )}
-                    
                     <aside className={`no-print bg-slate-900 text-white transition-all duration-300 flex flex-col ${isSidebarCollapsed ? (isMobilePortrait ? 'w-14' : 'w-20') : 'w-64'}`}>
                         <div className={`border-b border-slate-800 flex items-center justify-between transition-all duration-300 ${isSidebarCollapsed && isMobilePortrait ? 'p-2' : 'p-6'}`}>
                             <div className={`flex items-center gap-3 transition-opacity duration-300 ${isSidebarCollapsed ? 'opacity-0 w-0' : 'opacity-100'}`}>
                                 <div className="p-1 rounded-lg bg-white shrink-0"><SiteLogo className="w-6 h-6" /></div>
                                 <h1 className="font-bold text-lg tracking-tight leading-none truncate">Next Edu</h1>
                             </div>
-                            <button onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)} className="p-2 hover:bg-slate-800 rounded-lg text-slate-400">
-                                <Icon name="MenuAlt2" className={`transition-transform duration-300 ${isSidebarCollapsed ? 'rotate-180' : ''}`} />
-                            </button>
+                            <button onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)} className="p-2 hover:bg-slate-800 rounded-lg text-slate-400"><Icon name="MenuAlt2" className={`transition-transform duration-300 ${isSidebarCollapsed ? 'rotate-180' : ''}`} /></button>
                         </div>
-                        
                         <nav className="flex-1 py-4 overflow-y-auto custom-scrollbar overflow-x-hidden">
                             {currentCourse.chapters.map((chapter, cIdx) => (
                                 <div key={chapter.id} className="mb-4">
-                                    {!isSidebarCollapsed && (
-                                        <div className="px-4 py-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest truncate">{chapter.title}</div>
-                                    )}
+                                    {!isSidebarCollapsed && <div className="px-4 py-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest truncate">{chapter.title}</div>}
                                     {chapter.slides.map((slide, sIdx) => {
                                         const isActive = !courseCompleted && currentChapterIdx === cIdx && currentSlideIdx === sIdx;
                                         const isDone = isSlideCleared(slide.id) || slide.type === 'explanation';
                                         const unlocked = isSlideUnlocked(cIdx, sIdx);
                                         return (
-                                            <button 
-                                                key={slide.id} 
-                                                onClick={() => selectTopic(cIdx, sIdx)} 
-                                                className={`w-full flex items-start gap-3 transition-all text-left relative z-10 
-                                                    ${isSidebarCollapsed && isMobilePortrait ? 'px-2' : 'px-6'} 
-                                                    py-2.5 ${isActive ? 'bg-indigo-600/20 text-white border-l-4 border-indigo-600' : 'text-slate-400 hover:text-white'} 
-                                                    ${!unlocked ? 'opacity-20 cursor-not-allowed' : ''}`}
-                                            >
-                                                <div className={`mt-0.5 flex-shrink-0 ${isDone ? 'text-emerald-500' : 'text-slate-600'}`}>
-                                                    {isDone ? <Icon name="CheckCircle2" className="w-4 h-4" /> : <Icon name="PlayCircle" className="w-4 h-4" />}
-                                                </div>
-                                                {!isSidebarCollapsed && (
-                                                    <span className={`text-xs font-medium truncate ${isActive ? 'font-bold' : ''}`}>{slide.title}</span>
-                                                )}
+                                            <button key={slide.id} onClick={() => selectTopic(cIdx, sIdx)} className={`w-full flex items-start gap-3 transition-all text-left relative z-10 ${isSidebarCollapsed && isMobilePortrait ? 'px-2' : 'px-6'} py-2.5 ${isActive ? 'bg-indigo-600/20 text-white border-l-4 border-indigo-600' : 'text-slate-400 hover:text-white'} ${!unlocked ? 'opacity-20 cursor-not-allowed' : ''}`}>
+                                                <div className={`mt-0.5 flex-shrink-0 ${isDone ? 'text-emerald-500' : 'text-slate-600'}`}>{isDone ? <Icon name="CheckCircle2" className="w-4 h-4" /> : <Icon name="PlayCircle" className="w-4 h-4" />}</div>
+                                                {!isSidebarCollapsed && <span className={`text-xs font-medium truncate ${isActive ? 'font-bold text-white' : ''}`}>{slide.title}</span>}
                                             </button>
                                         );
                                     })}
                                 </div>
                             ))}
                         </nav>
-                        
-                        <div className="p-4 border-t border-slate-800">
-                            <button onClick={() => setView('welcome')} className={`w-full flex items-center gap-3 p-2 bg-slate-800 rounded-xl hover:bg-slate-700 transition-all text-left ${isSidebarCollapsed ? 'justify-center' : ''}`}>
-                                <img src={`https://ui-avatars.com/api/?name=${currentUser.name}&background=4F46E5&color=fff&size=32`} className="w-8 h-8 rounded-full shrink-0" />
-                                {!isSidebarCollapsed && (
-                                    <div className="flex-1 overflow-hidden">
-                                        <p className="text-[10px] font-medium truncate text-white">{currentUser.name}</p>
-                                        <p className="text-[8px] text-slate-400">Dashboard</p>
-                                    </div>
-                                )}
-                            </button>
-                        </div>
+                        <div className="p-4 border-t border-slate-800"><button onClick={() => setView('welcome')} className={`w-full flex items-center gap-3 p-2 bg-slate-800 rounded-xl hover:bg-slate-700 transition-all text-left ${isSidebarCollapsed ? 'justify-center' : ''}`}><img src={`https://ui-avatars.com/api/?name=${currentUser.name}&background=4F46E5&color=fff&size=32`} className="w-8 h-8 rounded-full shrink-0" />{!isSidebarCollapsed && <div className="flex-1 overflow-hidden"><p className="text-[10px] font-medium truncate text-white">{currentUser.name}</p><p className="text-[8px] text-slate-400">Dashboard</p></div>}</button></div>
                     </aside>
-
                     <main className="flex-1 flex flex-col bg-white overflow-hidden">
-                        <header className="no-print h-16 border-b flex items-center px-6 bg-white/80 backdrop-blur-md sticky top-0 z-10">
-                            <div className="flex items-center gap-2 text-sm text-slate-500">
-                                <Icon name={currentCourse.icon} className="w-4 h-4" />
-                                <span className="font-medium">{currentCourse.title}</span>
-                                {!courseCompleted && <><Icon name="ChevronRight" className="w-4 h-4 text-slate-300" /><span className="font-bold text-slate-900">{currentChapter.title}</span></>}
-                            </div>
+                        <header className="no-print h-16 border-b flex items-center px-6 bg-white/80 backdrop-blur-md sticky top-0 z-10 text-slate-900">
+                            <div className="flex items-center gap-2 text-sm text-slate-500"><Icon name={currentCourse.icon} className="w-4 h-4" /><span className="font-medium">{currentCourse.title}</span>{!courseCompleted && <><Icon name="ChevronRight" className="w-4 h-4 text-slate-300" /><span className="font-bold text-slate-900">{currentChapter.title}</span></>}</div>
                         </header>
                         <div className="flex-1 overflow-y-auto p-8 lg:p-12 custom-scrollbar">
                             {courseCompleted ? (
-                                <div className="max-w-4xl mx-auto text-center">
+                                <div className="max-w-4xl mx-auto text-center text-slate-900">
                                     {!showCertificate ? (
-                                        <div className="bg-slate-50 p-12 rounded-[40px] border-2 border-dashed border-indigo-200 animate-in zoom-in-95 text-center">
-                                            <div className="w-24 h-24 bg-yellow-400 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-bounce"><Icon name="Trophy" className="w-12 h-12" /></div>
-                                            <h2 className="serif text-5xl text-slate-900 mb-4">You're a Graduate!</h2>
-                                            <p className="text-xl text-slate-600 mb-8 max-w-lg mx-auto">Mastery achieved in <span className="font-bold text-indigo-600">{currentCourse.title}</span>.</p>
-                                            <div className="flex gap-4 justify-center"><button onClick={() => setShowCertificate(true)} className="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-indigo-700">View Certificate</button><button onClick={() => setView('welcome')} className="bg-white border-2 border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50">Back Home</button></div>
-                                        </div>
+                                        <div className="bg-slate-50 p-12 rounded-[40px] border-2 border-dashed border-indigo-200 animate-in zoom-in-95 text-center"><div className="w-24 h-24 bg-yellow-400 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-bounce"><Icon name="Trophy" className="w-12 h-12" /></div><h2 className="serif text-5xl text-slate-900 mb-4">You're a Graduate!</h2><p className="text-xl text-slate-600 mb-8 max-w-lg mx-auto">Mastery achieved in <span className="font-bold text-indigo-600">{currentCourse.title}</span>.</p><div className="flex gap-4 justify-center"><button onClick={() => setShowCertificate(true)} className="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-indigo-700">View Certificate</button><button onClick={() => setView('welcome')} className="bg-white border-2 border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50">Back Home</button></div></div>
                                     ) : (
-                                        <div className="animate-in fade-in slide-in-from-bottom-8">
-                                            <Certificate user={currentUser} courseTitle={currentCourse.title} />
-                                            <div className="no-print mt-8 flex justify-center gap-4"><button onClick={() => window.print()} className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-slate-800"><Icon name="Printer" /> Print</button><button onClick={() => setShowCertificate(false)} className="text-slate-500 font-bold px-6 py-3">Back</button></div>
-                                        </div>
+                                        <div className="animate-in fade-in slide-in-from-bottom-8"><Certificate user={currentUser} courseTitle={currentCourse.title} /><div className="no-print mt-8 flex justify-center gap-4"><button onClick={() => window.print()} className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-slate-800"><Icon name="Printer" /> Print</button><button onClick={() => setShowCertificate(false)} className="text-slate-500 font-bold px-6 py-3">Back</button></div></div>
                                     )}
                                 </div>
                             ) : (
-                                <div className="max-w-3xl mx-auto">
+                                <div className="max-w-3xl mx-auto text-slate-900">
                                     <div className="mb-8"><span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-bold uppercase tracking-widest mb-4">{currentSlide.type === 'explanation' ? 'Concept Overview' : 'Assessment'}</span><h2 className="text-4xl font-extrabold text-slate-900 leading-tight">{currentSlide.title}</h2></div>
                                     {currentSlide.type === 'explanation' ? (
-                                        <div className="space-y-6 text-slate-700 text-lg leading-relaxed animate-in fade-in duration-500">
-                                            <p>{currentSlide.content}</p>
-                                            <div className="bg-indigo-50 p-6 rounded-2xl border-l-4 border-indigo-600 flex items-center gap-4">
-                                                <Icon name="Lightbulb" className="text-indigo-600" />
-                                                <p className="text-indigo-900 italic font-medium">Concept learned! You can now proceed to the quiz.</p>
-                                            </div>
-                                        </div>
+                                        <div className="space-y-6 text-slate-700 text-lg leading-relaxed animate-in fade-in duration-500"><p>{currentSlide.content}</p><div className="bg-indigo-50 p-6 rounded-2xl border-l-4 border-indigo-600 flex items-center gap-4"><Icon name="Lightbulb" className="text-indigo-600" /><p className="text-indigo-900 italic font-medium">Concept clear? Continue to the challenge!</p></div></div>
                                     ) : (
-                                        <div className="bg-slate-50 border border-slate-200 p-8 rounded-[32px] shadow-sm">
-                                            <h3 className="text-xl font-bold mb-8 text-slate-800">{currentSlide.question}</h3>
-                                            {currentSlide.type === 'mcq' && (
-                                                <div className="space-y-3">{currentSlide.options.map((opt, idx) => (
-                                                    <button key={idx} disabled={isSlideCleared(currentSlide.id)} onClick={() => handleAnswerCheck(idx)} className={`w-full text-left p-5 rounded-2xl border-2 transition-all flex items-center justify-between ${isSlideCleared(currentSlide.id) && idx === currentSlide.answer ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-white bg-white hover:border-indigo-200 hover:bg-slate-50'}`}>
-                                                        <span className="font-semibold text-sm">{opt}</span>
-                                                        {isSlideCleared(currentSlide.id) && idx === currentSlide.answer && <Icon name="CheckCircle2" className="text-emerald-500" />}
-                                                    </button>
-                                                ))}</div>
-                                            )}
-                                            {currentSlide.type === 'tf' && (
-                                                <div className="flex gap-4">{[true, false].map((val) => (
-                                                    <button key={val.toString()} disabled={isSlideCleared(currentSlide.id)} onClick={() => handleAnswerCheck(val)} className={`flex-1 p-6 rounded-2xl border-2 font-bold transition-all ${isSlideCleared(currentSlide.id) && val === currentSlide.answer ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-white bg-white hover:border-indigo-200'}`}>{val ? 'TRUE' : 'FALSE'}</button>
-                                                ))}</div>
-                                            )}
-                                            {currentSlide.type === 'fitb' && (
-                                                <div className="relative">
-                                                    <input type="text" placeholder="Type answer..." disabled={isSlideCleared(currentSlide.id)} className={`w-full p-5 rounded-2xl border-2 outline-none font-bold text-lg ${isSlideCleared(currentSlide.id) ? 'border-emerald-500 bg-emerald-50 text-emerald-900' : 'border-slate-200 focus:border-indigo-500 bg-white'}`} onKeyDown={(e) => e.key === 'Enter' && handleAnswerCheck(e.target.value)} />
-                                                    {isSlideCleared(currentSlide.id) && <Icon name="CheckCircle2" className="absolute right-5 top-1/2 -translate-y-1/2 text-emerald-500" />}
-                                                </div>
-                                            )}
-                                            {isSlideCleared(currentSlide.id) && (
-                                                <div className="mt-8 p-6 rounded-2xl bg-emerald-50 text-emerald-800 border border-emerald-100 animate-in zoom-in-95"><div className="flex items-center gap-2 font-bold mb-2"><Icon name="Award" /> Correct!</div><p className="text-sm opacity-90">{currentSlide.explanation}</p></div>
-                                            )}
-                                        </div>
+                                        <div className="bg-slate-50 border border-slate-200 p-8 rounded-[32px] shadow-sm"><h3 className="text-xl font-bold mb-8 text-slate-800">{currentSlide.question}</h3>{currentSlide.type === 'mcq' && (
+                                            <div className="space-y-3">{currentSlide.options.map((opt, idx) => (<button key={idx} disabled={isSlideCleared(currentSlide.id)} onClick={() => handleAnswerCheck(idx)} className={`w-full text-left p-5 rounded-2xl border-2 transition-all flex items-center justify-between ${isSlideCleared(currentSlide.id) && idx === currentSlide.answer ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-bold' : 'border-white bg-white hover:border-indigo-200 hover:bg-slate-50'}`}><span className="font-semibold text-sm">{opt}</span>{isSlideCleared(currentSlide.id) && idx === currentSlide.answer && <Icon name="CheckCircle2" className="text-emerald-500" />}</button>))}</div>
+                                        )}{currentSlide.type === 'tf' && (
+                                            <div className="flex gap-4">{[true, false].map((val) => (<button key={val.toString()} disabled={isSlideCleared(currentSlide.id)} onClick={() => handleAnswerCheck(val)} className={`flex-1 p-6 rounded-2xl border-2 font-bold transition-all ${isSlideCleared(currentSlide.id) && val === currentSlide.answer ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-white bg-white hover:border-indigo-200'}`}>{val ? 'TRUE' : 'FALSE'}</button>))}</div>
+                                        )}{currentSlide.type === 'fitb' && (
+                                            <div className="relative"><input type="text" placeholder="Type answer..." disabled={isSlideCleared(currentSlide.id)} className={`w-full p-5 rounded-2xl border-2 outline-none font-bold text-lg ${isSlideCleared(currentSlide.id) ? 'border-emerald-500 bg-emerald-50 text-emerald-900' : 'border-slate-200 focus:border-indigo-500 bg-white'}`} onKeyDown={(e) => e.key === 'Enter' && handleAnswerCheck(e.target.value)} />{isSlideCleared(currentSlide.id) && <Icon name="CheckCircle2" className="absolute right-5 top-1/2 -translate-y-1/2 text-emerald-500" />}</div>
+                                        )}{isSlideCleared(currentSlide.id) && (<div className="mt-8 p-6 rounded-2xl bg-emerald-50 text-emerald-800 border border-emerald-100 animate-in zoom-in-95"><div className="flex items-center gap-2 font-bold mb-2"><Icon name="Award" /> Correct!</div><p className="text-sm opacity-90">{currentSlide.explanation || "Concept mastered."}</p></div>)}</div>
                                     )}
                                 </div>
                             )}
                         </div>
-                        <footer className="no-print h-20 border-t bg-white px-8 flex items-center justify-between sticky bottom-0 z-10">
+                        <footer className="no-print h-20 border-t bg-white px-8 flex items-center justify-between sticky bottom-0 z-10 text-slate-900">
                             <button onClick={handlePrev} className="flex items-center gap-2 text-slate-500 hover:text-indigo-600 font-bold transition-all disabled:opacity-20" disabled={currentChapterIdx === 0 && currentSlideIdx === 0 && !courseCompleted}><Icon name="ChevronLeft" /> Prev</button>
                             <div className="flex items-center gap-1.5">{!courseCompleted && currentChapter.slides.map((s, idx) => <div key={idx} className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentSlideIdx ? 'w-8 bg-indigo-600' : isSlideCleared(s.id) || s.type === 'explanation' ? 'w-2 bg-emerald-400' : 'w-2 bg-slate-200'}`} />)}</div>
-                            {!courseCompleted && (
-                                <button onClick={handleNext} className={`flex items-center gap-2 px-8 py-3 rounded-2xl font-extrabold transition-all shadow-lg ${isCurrentSlideCleared ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200' : 'bg-slate-100 text-slate-300 cursor-not-allowed shadow-none'}`}>
-                                    {(currentSlideIdx === currentChapter.slides.length - 1 && currentChapterIdx === currentCourse.chapters.length - 1) ? 'Finish' : 'Next'} <Icon name="ChevronRight" />
-                                </button>
-                            )}
+                            {!courseCompleted && (<button onClick={handleNext} className={`flex items-center gap-2 px-8 py-3 rounded-2xl font-extrabold transition-all shadow-lg ${isCurrentCleared ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200' : 'bg-slate-100 text-slate-300 cursor-not-allowed shadow-none'}`}>{(currentSlideIdx === currentChapter.slides.length - 1 && currentChapterIdx === currentCourse.chapters.length - 1) ? 'Finish' : 'Next'} <Icon name="ChevronRight" /></button>)}
                         </footer>
                     </main>
                 </div>
