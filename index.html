@@ -110,6 +110,451 @@
         // --- Core Data ---
         const COURSES = [
             {
+                "id": "ab-101",
+                "title": "A-Level Biology (AQA)",
+                "icon": "Book",
+                "chapters": [
+                    {
+                    "id": "ab-c1",
+                    "title": "Biological Molecules",
+                    "slides": [
+                        {
+                        "id": "ab1e",
+                        "type": "explanation",
+                        "title": "1. The Stuff of Life",
+                        "content": "Think of biological molecules as the LEGO bricks of life. All living things are built from the same basic set of carbon-based building blocks. This isn't just coincidence—it's evidence we all evolved from the same starting point billions of years ago. Pretty neat, huh?"
+                        },
+                        {
+                        "id": "ab1q",
+                        "type": "mcq",
+                        "title": "Evolutionary Evidence",
+                        "question": "Why is the similarity in biological molecules across species considered evidence for evolution?",
+                        "options": ["Because it's random", "Because it suggests common ancestry", "Because molecules change daily", "Because plants and animals are identical"],
+                        "answer": 1,
+                        "explanation": "The fact that all living things share the same basic biochemistry suggests they descended from a common ancestor—that's indirect evidence for evolution."
+                        },
+                        {
+                        "id": "ab2e",
+                        "type": "explanation",
+                        "title": "2. Building Block Basics",
+                        "content": "Monomers are like single LEGO bricks, while polymers are the awesome structures you build with them. Your DNA, proteins, and starch are all polymers. When monomers link up, they're basically having a little party and kicking out a water molecule as a party favor."
+                        },
+                        {
+                        "id": "ab2q",
+                        "type": "tf",
+                        "title": "Polymer Party",
+                        "question": "Polymers are made by hydrolysis reactions that add water molecules.",
+                        "answer": false,
+                        "explanation": "Nope—polymers are made by condensation reactions that REMOVE water. Hydrolysis BREAKS polymers apart by adding water."
+                        },
+                        {
+                        "id": "ab3e",
+                        "type": "explanation",
+                        "title": "3. Sweet Science",
+                        "content": "Carbohydrates are nature's candy. The simplest sugars (monosaccharides) include glucose, fructose, and galactose. Two monosaccharides get together and form a disaccharide, like a sugar couple. Maltose, sucrose, and lactose are the famous sugar couples you need to know."
+                        },
+                        {
+                        "id": "ab3q",
+                        "type": "fitb",
+                        "title": "Sugar Couples",
+                        "question": "The disaccharide formed from glucose and fructose is called _______.",
+                        "answer": "sucrose",
+                        "explanation": "Sucrose is your regular table sugar—one glucose and one fructose holding hands (via a glycosidic bond)."
+                        },
+                        {
+                        "id": "ab4e",
+                        "type": "explanation",
+                        "title": "4. Glucose's Split Personality",
+                        "content": "Glucose has two forms: alpha and beta. They're isomers—same ingredients, different arrangement. Picture them as identical twins who style their hair differently. This tiny difference matters BIG time for how they're used in your body."
+                        },
+                        {
+                        "id": "ab4q",
+                        "type": "mcq",
+                        "title": "Glucose Twins",
+                        "question": "What are α-glucose and β-glucose?",
+                        "options": ["Different elements", "Different molecules", "Isomers", "Different sugars"],
+                        "answer": 2,
+                        "explanation": "They're isomers—same molecular formula (C₆H₁₂O₆) but with atoms arranged differently. Tiny difference, huge consequences!"
+                        },
+                        {
+                        "id": "ab5e",
+                        "type": "explanation",
+                        "title": "5. Testing for Sweetness",
+                        "content": "The Benedict's test is like a magic trick for sugars. Add blue Benedict's reagent to your sample, heat it up, and watch the color change. Reducing sugars (like glucose) give a colored precipitate. Non-reducing sugars (like sucrose) need a little acid treatment first to break them down."
+                        },
+                        {
+                        "id": "ab5q",
+                        "type": "tf",
+                        "title": "Sugar Detective",
+                        "question": "All sugars give a positive Benedict's test without any special treatment.",
+                        "answer": false,
+                        "explanation": "Nope—only reducing sugars do. Non-reducing sugars like sucrose need to be broken down with acid first before they'll show up."
+                        },
+                        {
+                        "id": "ab6e",
+                        "type": "explanation",
+                        "title": "6. The Big Sugar Chains",
+                        "content": "Polysaccharides are like long sugar trains with hundreds of glucose carriages linked together. Starch and glycogen are storage polysaccharides—your body's pantry shelves. Cellulose is structural—it's the wooden beams in plant cell walls."
+                        },
+                        {
+                        "id": "ab6q",
+                        "type": "mcq",
+                        "title": "Sugar Storage",
+                        "question": "Which polysaccharide do plants use to store excess glucose?",
+                        "options": ["Glycogen", "Cellulose", "Starch", "Chitin"],
+                        "answer": 2,
+                        "explanation": "Plants stash away extra glucose as starch. Animals use glycogen. Cellulose is for structure, not storage."
+                        },
+                        {
+                        "id": "ab7e",
+                        "type": "explanation",
+                        "title": "7. Starch's Clever Design",
+                        "content": "Starch is brilliant packaging. Amylose coils up tight to save space, while amylopectin has branches for quick access. It's insoluble so it doesn't mess with water balance. Plants basically invented the perfect Tupperware for their sugar leftovers."
+                        },
+                        {
+                        "id": "ab7q",
+                        "type": "fitb",
+                        "title": "Starch Structure",
+                        "question": "The branched component of starch is called _______.",
+                        "answer": "amylopectin",
+                        "explanation": "Amylopectin is the branched one—those branches mean enzymes can get at the glucose quickly when energy is needed."
+                        },
+                        {
+                        "id": "ab8e",
+                        "type": "explanation",
+                        "title": "8. Glycogen: Animal Energy Bank",
+                        "content": "Glycogen is like starch's more extreme cousin. It's even more branched, so animals can release glucose super fast when they need quick energy (like running from a predator). Your liver and muscles are packed with this stuff."
+                        },
+                        {
+                        "id": "ab8q",
+                        "type": "tf",
+                        "title": "Glycogen Geography",
+                        "question": "Glycogen is primarily found in plant cells.",
+                        "answer": false,
+                        "explanation": "Wrong kingdom! Glycogen is the animal kingdom's storage polysaccharide. Plants use starch."
+                        },
+                        {
+                        "id": "ab9e",
+                        "type": "explanation",
+                        "title": "9. Cellulose: Plant Scaffolding",
+                        "content": "Cellulose is what gives plants their rigid structure. Unlike starch, it's made of β-glucose arranged in straight chains that form super-strong fibers. These microfibrils are nature's steel cables, giving plant cells their shape and strength."
+                        },
+                        {
+                        "id": "ab9q",
+                        "type": "mcq",
+                        "title": "Plant Architecture",
+                        "question": "What type of glucose makes up cellulose?",
+                        "options": ["α-glucose only", "β-glucose only", "Both α and β", "Fructose"],
+                        "answer": 1,
+                        "explanation": "Cellulose is exclusively made of β-glucose. This gives it those straight chains that form strong fibers—perfect for structural support."
+                        },
+                        {
+                        "id": "ab10e",
+                        "type": "explanation",
+                        "title": "10. Iodine's Color Magic",
+                        "content": "Testing for starch is simple: add iodine solution. If starch is there, it turns from browny-orange to a dramatic blue-black. No starch? No color change. It's one of the easiest and most satisfying tests in biology."
+                        },
+                        {
+                        "id": "ab10q",
+                        "type": "fitb",
+                        "title": "Starch Test",
+                        "question": "A positive iodine test for starch shows a _______ color.",
+                        "answer": "blue-black",
+                        "explanation": "That distinctive blue-black color is your clue that starch is present. Simple but effective!"
+                        },
+                        {
+                        "id": "ab11e",
+                        "type": "explanation",
+                        "title": "11. Fats 101",
+                        "content": "Lipids (fats and oils) are your body's long-term energy storage. Unlike carbs and proteins, they're not polymers. Triglycerides have one glycerol molecule holding hands with three fatty acids. They're hydrophobic (water-hating), which makes them great for storage."
+                        },
+                        {
+                        "id": "ab11q",
+                        "type": "mcq",
+                        "title": "Fat Composition",
+                        "question": "A triglyceride is made of:",
+                        "options": ["Glycerol + 2 fatty acids", "Glycerol + 3 fatty acids", "Glucose + fatty acids", "Amino acids"],
+                        "answer": 1,
+                        "explanation": "One glycerol backbone plus three fatty acid tails = one triglyceride. That's the basic fat structure."
+                        },
+                        {
+                        "id": "ab12e",
+                        "type": "explanation",
+                        "title": "12. Saturated vs Unsaturated",
+                        "content": "Think of fatty acids like people at a party. Saturated fats are stiff and formal—no double bonds between carbons. Unsaturated fats are more relaxed with kinks (double bonds). Those kinks prevent them from packing tightly, which is why oils are liquid at room temperature."
+                        },
+                        {
+                        "id": "ab12q",
+                        "type": "tf",
+                        "title": "Fat Flexibility",
+                        "question": "Saturated fatty acids have double bonds between their carbon atoms.",
+                        "answer": false,
+                        "explanation": "Actually, saturated means 'saturated with hydrogen'—no double bonds. Unsaturated fats have those double bonds that create kinks."
+                        },
+                        {
+                        "id": "ab13e",
+                        "type": "explanation",
+                        "title": "13. The Emulsion Test",
+                        "content": "To test for lipids, shake your sample with ethanol, then pour it into water. If lipids are present, you'll get a milky white emulsion. The more lipid, the milkier it gets. It's like making a lipid latte!"
+                        },
+                        {
+                        "id": "ab13q",
+                        "type": "fitb",
+                        "title": "Lipid Detection",
+                        "question": "In the emulsion test, lipids produce a _______ appearance in water.",
+                        "answer": "milky (or cloudy)",
+                        "explanation": "That milky cloudiness is the giveaway—lipids don't dissolve in water but form an emulsion that scatters light."
+                        },
+                        {
+                        "id": "ab14e",
+                        "type": "explanation",
+                        "title": "14. Protein Building Blocks",
+                        "content": "Proteins are made from amino acids—there are 20 different types your body uses. Each has the same basic structure but a different 'R group' side chain. It's like having 20 different LEGO pieces with unique attachments."
+                        },
+                        {
+                        "id": "ab14q",
+                        "type": "mcq",
+                        "title": "Amino Acid Alphabet",
+                        "question": "How many different amino acids are commonly found in proteins?",
+                        "options": ["10", "20", "30", "100"],
+                        "answer": 1,
+                        "explanation": "Just 20 amino acids make up all the proteins in your body. It's amazing what variety you can get from just 20 building blocks!"
+                        },
+                        {
+                        "id": "ab15e",
+                        "type": "explanation",
+                        "title": "15. Protein Structure Levels",
+                        "content": "Proteins have four levels of structure. Primary is the amino acid sequence (like a sentence). Secondary is local folding (alpha helices and beta sheets). Tertiary is the 3D shape. Quaternary is when multiple chains come together. Structure determines function—mess with the shape, and you mess with the job."
+                        },
+                        {
+                        "id": "ab15q",
+                        "type": "tf",
+                        "title": "Protein Folding",
+                        "question": "The tertiary structure of a protein refers to its amino acid sequence.",
+                        "answer": false,
+                        "explanation": "That's the primary structure. Tertiary is the overall 3D shape—how the whole chain folds up into a functional blob."
+                        },
+                        {
+                        "id": "ab16e",
+                        "type": "explanation",
+                        "title": "16. Bonds That Hold Proteins Together",
+                        "content": "Proteins are held in shape by several types of bonds: hydrogen bonds (weak but numerous), ionic bonds (positive meets negative), and disulfide bridges (strong sulfur-sulfur bonds). It's like having Velcro, magnets, and superglue all working together."
+                        },
+                        {
+                        "id": "ab16q",
+                        "type": "mcq",
+                        "title": "Protein Bonding",
+                        "question": "Which bond in proteins involves sulfur atoms?",
+                        "options": ["Hydrogen bonds", "Ionic bonds", "Disulfide bridges", "Peptide bonds"],
+                        "answer": 2,
+                        "explanation": "Disulfide bridges are covalent bonds between sulfur atoms in cysteine amino acids—they're the 'superglue' of protein structure."
+                        },
+                        {
+                        "id": "ab17e",
+                        "type": "explanation",
+                        "title": "17. The Biuret Test",
+                        "content": "To test for proteins, add sodium hydroxide to make it alkaline, then copper(II) sulfate. If protein's there, it turns purple. No protein? Stays blue. It's like a protein mood ring!"
+                        },
+                        {
+                        "id": "ab17q",
+                        "type": "fitb",
+                        "title": "Protein Detection",
+                        "question": "A positive biuret test for proteins shows a _______ color.",
+                        "answer": "purple (or violet)",
+                        "explanation": "That purple color is the telltale sign—the copper ions interact with peptide bonds in the protein."
+                        },
+                        {
+                        "id": "ab18e",
+                        "type": "explanation",
+                        "title": "18. Enzymes: Biological Catalysts",
+                        "content": "Enzymes are protein speed-demons that make chemical reactions go faster without getting used up. They work by lowering activation energy—like digging a tunnel through a mountain instead of climbing over it. Each enzyme is picky about which reaction it helps."
+                        },
+                        {
+                        "id": "ab18q",
+                        "type": "tf",
+                        "title": "Enzyme Specificity",
+                        "question": "Enzymes can catalyze many different types of reactions.",
+                        "answer": false,
+                        "explanation": "Most enzymes are highly specific—they usually only work on one particular reaction with one particular substrate."
+                        },
+                        {
+                        "id": "ab19e",
+                        "type": "explanation",
+                        "title": "19. How Enzymes Work",
+                        "content": "The 'induced fit' model says enzymes and substrates are like a handshake—they change shape slightly to fit together perfectly. The active site is where the magic happens. Once the substrate is in place, the reaction occurs much more easily. Then products leave, and the enzyme is ready for another round."
+                        },
+                        {
+                        "id": "ab19q",
+                        "type": "mcq",
+                        "title": "Enzyme Action",
+                        "question": "According to the induced fit model:",
+                        "options": ["Enzyme and substrate are rigid", "Only the substrate changes shape", "Both enzyme and substrate change shape", "Enzymes don't have active sites"],
+                        "answer": 2,
+                        "explanation": "Both change shape slightly—the enzyme's active site molds around the substrate for a perfect fit, like a hand in a glove."
+                        },
+                        {
+                        "id": "ab20e",
+                        "type": "explanation",
+                        "title": "20. Temperature's Effect on Enzymes",
+                        "content": "Enzymes are Goldilocks about temperature—not too hot, not too cold. Warmer means more collisions (faster reactions). But too hot denatures them (permanently changes shape). Most human enzymes like body temperature (37°C). Some extremophile enzymes work in boiling water or freezing conditions!"
+                        },
+                        {
+                        "id": "ab20q",
+                        "type": "fitb",
+                        "title": "Temperature Trouble",
+                        "question": "When an enzyme is heated too much and loses its shape, it's said to be _______.",
+                        "answer": "denatured",
+                        "explanation": "Denatured means the enzyme's shape is permanently changed—the active site is wrecked, so it can't do its job anymore."
+                        },
+                        {
+                        "id": "ab21e",
+                        "type": "explanation",
+                        "title": "21. pH's Effect on Enzymes",
+                        "content": "Enzymes are also picky about pH. Most like neutral (pH 7), but stomach enzymes prefer acid (pH 2). Wrong pH disrupts the bonds holding the enzyme's shape. It's like using the wrong key—the enzyme-substrate lock won't work anymore."
+                        },
+                        {
+                        "id": "ab21q",
+                        "type": "mcq",
+                        "title": "pH Preferences",
+                        "question": "Pepsin, a stomach enzyme, works best at:",
+                        "options": ["pH 2", "pH 7", "pH 9", "pH 14"],
+                        "answer": 0,
+                        "explanation": "Pepsin loves acid! It works best around pH 2, which is perfect for the acidic environment of your stomach."
+                        },
+                        {
+                        "id": "ab22e",
+                        "type": "explanation",
+                        "title": "22. Enzyme Inhibition",
+                        "content": "Inhibitors are enzyme party-poopers. Competitive inhibitors block the active site (like parking in someone's spot). Non-competitive inhibitors bind elsewhere and change the enzyme's shape (like bending the key). Some drugs and poisons work this way."
+                        },
+                        {
+                        "id": "ab22q",
+                        "type": "tf",
+                        "title": "Inhibition Types",
+                        "question": "Competitive inhibitors bind to the enzyme's active site.",
+                        "answer": true,
+                        "explanation": "Exactly! They compete with the substrate for the active site—more substrate can sometimes overcome them."
+                        },
+                        {
+                        "id": "ab23e",
+                        "type": "explanation",
+                        "title": "23. DNA vs RNA",
+                        "content": "DNA is the master blueprint (stores genetic info). RNA is the photocopy that takes instructions to the protein factories (ribosomes). DNA is double-stranded with deoxyribose sugar; RNA is single-stranded with ribose sugar. Different jobs, similar but distinct structures."
+                        },
+                        {
+                        "id": "ab23q",
+                        "type": "mcq",
+                        "title": "Genetic Material",
+                        "question": "Which nucleic acid transfers genetic information from DNA to ribosomes?",
+                        "options": ["DNA only", "RNA only", "Both", "Neither"],
+                        "answer": 1,
+                        "explanation": "RNA is the messenger—it carries the genetic instructions from DNA in the nucleus to the ribosomes where proteins are made."
+                        },
+                        {
+                        "id": "ab24e",
+                        "type": "explanation",
+                        "title": "24. DNA's Clever Structure",
+                        "content": "DNA is a double helix—two strands twisted together like a spiral staircase. The steps are base pairs (A-T and C-G). The rails are sugar-phosphate backbones. It's brilliant packaging: stable, can be copied exactly, and stores tons of information in a tiny space."
+                        },
+                        {
+                        "id": "ab24q",
+                        "type": "fitb",
+                        "title": "Base Pairing",
+                        "question": "In DNA, adenine always pairs with _______.",
+                        "answer": "thymine",
+                        "explanation": "A with T, C with G—these specific pairings are what make DNA copying so accurate. Two hydrogen bonds for A-T, three for C-G."
+                        },
+                        {
+                        "id": "ab25e",
+                        "type": "explanation",
+                        "title": "25. DNA Replication",
+                        "content": "Cells copy their DNA before dividing so each new cell gets the full set. It's semi-conservative: each new DNA molecule has one old strand and one new strand. Helicase unzips the double helix, DNA polymerase adds new nucleotides, and you get two identical DNA molecules. Neat, huh?"
+                        },
+                        {
+                        "id": "ab25q",
+                        "type": "tf",
+                        "title": "Replication Method",
+                        "question": "DNA replication is described as 'semi-conservative' because each new molecule contains one old strand and one new strand.",
+                        "answer": true,
+                        "explanation": "Spot on! This ensures genetic continuity—each daughter cell gets DNA that's half original, half fresh copy."
+                        },
+                        {
+                        "id": "ab26e",
+                        "type": "explanation",
+                        "title": "26. ATP: Energy Currency",
+                        "content": "ATP is your cells' energy cash. Glucose has lots of energy, but ATP is the small change you actually spend. It's a modified nucleotide with three phosphate groups. Break one phosphate bond (hydrolysis), and you release energy the cell can use immediately."
+                        },
+                        {
+                        "id": "ab26q",
+                        "type": "mcq",
+                        "title": "Energy Cash",
+                        "question": "What does ATP stand for?",
+                        "options": ["Adenosine Triphosphate", "Amino Triphosphate", "Active Transport Protein", "Adenine Three Phosphates"],
+                        "answer": 0,
+                        "explanation": "Adenosine Triphosphate—adenosine with three phosphate groups. Breaking those phosphate bonds releases energy your cells can spend."
+                        },
+                        {
+                        "id": "ab27e",
+                        "type": "explanation",
+                        "title": "27. Water's Weird Properties",
+                        "content": "Water is weird in useful ways. It's a great solvent (things dissolve in it). It has high specific heat (resists temperature changes). It's cohesive (sticks to itself). It has high latent heat of vaporization (cooling by evaporation). Life as we know it wouldn't work without water's quirks!"
+                        },
+                        {
+                        "id": "ab27q",
+                        "type": "fitb",
+                        "title": "Water Properties",
+                        "question": "Water's ability to resist temperature changes is due to its high _______.",
+                        "answer": "specific heat capacity",
+                        "explanation": "High specific heat means water takes lots of energy to heat up and releases lots when cooling—great for temperature stability in organisms."
+                        },
+                        {
+                        "id": "ab28e",
+                        "type": "explanation",
+                        "title": "28. Inorganic Ions",
+                        "content": "These are ions without carbon (mostly). They're like the supporting actors in your body's chemistry. Iron in hemoglobin carries oxygen. Hydrogen ions determine pH. Sodium helps transport glucose. Phosphate is in DNA, RNA, and ATP. Small but mighty important!"
+                        },
+                        {
+                        "id": "ab28q",
+                        "type": "tf",
+                        "title": "Iron's Role",
+                        "question": "Iron ions in hemoglobin carry carbon dioxide.",
+                        "answer": false,
+                        "explanation": "Nope—iron carries OXYGEN. Each hemoglobin has four iron ions, each binding one oxygen molecule for transport around your body."
+                        },
+                        {
+                        "id": "ab29e",
+                        "type": "explanation",
+                        "title": "29. Benedict's Test in Detail",
+                        "content": "Here's the full recipe: Add Benedict's reagent (blue) to your sample. Heat in a boiling water bath. Reducing sugars give a colored precipitate (green → yellow → orange → brick red). The more sugar, the further the color change goes. For non-reducing sugars, add acid first to break them down, neutralize, then test."
+                        },
+                        {
+                        "id": "ab29q",
+                        "type": "mcq",
+                        "title": "Benedict's Colors",
+                        "question": "What color indicates a HIGH concentration of reducing sugar in the Benedict's test?",
+                        "options": ["Blue", "Green", "Orange", "Brick red"],
+                        "answer": 3,
+                        "explanation": "Brick red means lots of reducing sugar present. Blue = none, green = little, orange = medium, brick red = lots!"
+                        },
+                        {
+                        "id": "ab30e",
+                        "type": "explanation",
+                        "title": "30. Polysaccharide Functions",
+                        "content": "Starch (plants) and glycogen (animals) are compact energy stores. Cellulose provides rigid structure in plant cell walls. Chitin (fungi) gives structural support. All are polysaccharides, but their different structures suit their different jobs. Structure determines function—a recurring theme in biology!"
+                        },
+                        {
+                        "id": "ab30q",
+                        "type": "fitb",
+                        "title": "Structural Support",
+                        "question": "The polysaccharide that makes up fungal cell walls is _______.",
+                        "answer": "chitin",
+                        "explanation": "Chitin is to fungi what cellulose is to plants—their structural building material. It's also what makes insect exoskeletons tough!"
+                        }
+                    ]
+                    }
+                ]
+            },
+            {
                 id: 'qg-101',
                 title: 'Quantum Gardening',
                 icon: 'Lightbulb',
